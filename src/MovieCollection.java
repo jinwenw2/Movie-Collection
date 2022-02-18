@@ -182,7 +182,24 @@ public class MovieCollection
   
   private void searchCast()
   {
-    
+    System.out.println("Please enter the cast member: ");
+    String member = scanner.nextLine();
+    member = member.toLowerCase();
+    ArrayList<String> cast = new ArrayList<String>();
+    for (int i = 0; i < movies.size(); i++)
+    {
+      String[] tempMovie = movies.get(i).getCast().split("\\|");
+      //System.out.println(Arrays.toString(tempMovie));
+      for (int j = 0; j < tempMovie.length; j++)
+      {
+        String name = tempMovie[j].toLowerCase();
+        if ((member.equals(name)))
+        {
+          cast.add(tempMovie[j]);
+        }
+      }
+    }
+    System.out.println(cast);
   }
 
   private void searchKeywords()
