@@ -346,7 +346,6 @@ public class MovieCollection
   private void listHighestRated()
   {
     ArrayList<Movie> topMovies = new ArrayList<Movie>();
-    double minimum = -1;
     for (int i = 0; i < movies.size(); i++)
     {
       topMovies.add(movies.get(i));
@@ -383,12 +382,12 @@ public class MovieCollection
     displayMovieInfo(selectedMovie);
 
     System.out.println("\n ** Press Enter to Return to Main Menu **");
+    scanner.nextLine();
   }
 
   private void listHighestRevenue()
   {
     ArrayList<Movie> topMovies = new ArrayList<Movie>();
-    double minimum = -1;
     for (int i = 0; i < movies.size(); i++)
     {
       topMovies.add(movies.get(i));
@@ -425,6 +424,7 @@ public class MovieCollection
     displayMovieInfo(selectedMovie);
 
     System.out.println("\n ** Press Enter to Return to Main Menu **");
+    scanner.nextLine();
   }
   
   private void importMovieList(String fileName)
