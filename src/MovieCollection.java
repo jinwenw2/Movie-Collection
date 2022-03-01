@@ -251,10 +251,10 @@ public class MovieCollection
     // search through ALL movies in collection
     for (int i = 0; i < movies.size(); i++)
     {
-      String movieTitle = movies.get(i).getKeywords();
-      movieTitle = movieTitle.toLowerCase();
+      String word = movies.get(i).getKeywords();
+      word = word.toLowerCase();
 
-      if (movieTitle.indexOf(key) != -1)
+      if (word.indexOf(key) != -1)
       {
         //add the Movie objest to the results list
         results.add(movies.get(i));
