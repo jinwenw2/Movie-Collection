@@ -224,7 +224,7 @@ public class MovieCollection
     {
       if (movies.get(i).getCast().contains(cast.get(userChoice)))
       {
-        System.out.println(index + ". " + movies.get(i));
+        System.out.println(index + ". " + movies.get(i).getTitle());
         info.add(movies.get(i));
         index++;
       }
@@ -326,7 +326,7 @@ public class MovieCollection
     {
       if (movies.get(i).getGenres().equals(genres.get(userChoice)))
       {
-        System.out.println(index + ". " + movies.get(i));
+        System.out.println(index + ". " + movies.get(i).getTitle());
         info.add(movies.get(i));
         index++;
       }
@@ -371,7 +371,7 @@ public class MovieCollection
     {
       movieNumber += 1;
       movieList.add(topMovies.get(i));
-      System.out.println(movieNumber + ". " + topMovies.get(i) + " Rating - " + topMovies.get(i).getUserRating());
+      System.out.println(movieNumber + ". " + topMovies.get(i).getTitle() + " Rating - " + topMovies.get(i).getUserRating());
     }
     System.out.println("Which movie would you like to learn about?");
     System.out.print("Enter number: ");
@@ -413,7 +413,7 @@ public class MovieCollection
     {
       movieNumber += 1;
       movieList.add(topMovies.get(i));
-      System.out.println(movieNumber + ". " + topMovies.get(i) + " Revenue - " + topMovies.get(i).getRevenue());
+      System.out.println(movieNumber + ". " + topMovies.get(i).getTitle() + " Revenue - " + topMovies.get(i).getRevenue());
     }
     System.out.println("Which movie would you like to learn about?");
     System.out.print("Enter number: ");
